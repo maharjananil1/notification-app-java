@@ -1,0 +1,25 @@
+spring:
+  mvc:
+    path match:
+      matching-strategy: ant-path-matcher
+  datasource:
+    username: postgres
+    password: TEST@123
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/notification
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+user-defined:
+  swagger:
+    base-url: /notification_server
+  custom:
+    timeout: 10000
+    is_save: true
+server:
+  servlet:
+    context-path: /notification_server
